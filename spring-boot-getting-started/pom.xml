@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>spring-boot-getting-started</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- 스프링 부트를 사용하면 개발자가 직접 관리해야하는 의존성이 적어진다.-->
+
+    <!-- spring-boot-starter-parent를 현재 프로젝트의 부모 프로젝트로 설정.
+    spring-boot-starter-parent에는 기본적으로 제공되는 여러 의존성와 설정들이 존재한다.-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.3.RELEASE</version>
+    </parent>
+
+    <!-- 스프링 부트에서 기본적으로 제공되는 스프링 버전을 수정하고 싶을떄
+    아래와 같이 하면 된다.-->
+    <properties>
+        <spring.version>5.0.6.RELEASE</spring.version>
+    </properties>
+
+    <dependencies>
+        <!-- 스프링 부트에서 기본적으로 제공하는 의존성은 버전을 명시 안 해줘도 된다.
+        인텔리 j 기준으로 왼쪽에 파란색 동그라미 표시를 눌러보면 버전을 확인할 수 있다.-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- bungwookspringbootstarter 프로젝트를 의존성으로 추가한다.
+        bungwookspringbootstarter의 빈을 사용할 수 있다.
+        bungwookspringbootstarter프로젝트를 maven install을 통해 로컬 maven 저장소에 설치해야한다. -->
+        <dependency>
+            <groupId>com.jujubebat</groupId>
+            <artifactId>byungwook-spring-boot-starter</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
